@@ -8,35 +8,35 @@ using namespace std; // Inclus le std pour ne pas le remettre à chq fois dans no
 
 int main()
 {
-	int cinq;
-	int nb1 = 0;
-	int nb2;
-	int nb3;
-	int nb4;
-	int nb5;
+	int cinq; // Initialiser une variable ou stocker le nombre à cinq chiffre de l'utilisateur
+	int nb1; // Variable pour stocker le premier chiffre du nombre
+	int nb2; // Variable pour stocker le deuxième chiffre du nombre
+	int nb3; // Variable pour stocker le troisième chiffre du nombre
+	int nb4; // Variable pour stocker le quatrième chiffre du nombre
+	int nb5; // Variable pour stocker le cinquième chiffre du nombre
 
 
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, ""); // Ajouter la biblio
 
-	cout << "Ce programme vous demande d'entrer un nombre à cinq chiffres puis les affiches verticalement! \n \n";
+	cout << "Ce programme vous demande d'entrer un nombre à cinq chiffres puis les affiches verticalement! \n \n"; // Afficher à l'écran l'utilité du programme
 
-	cout << "\t \t \t---------------------------Exercice #2-------------------------------- \n";
+	cout << "\t \t \t---------------------------Exercice #2-------------------------------- \n"; // Afficher le numéro de l'exercice
 
-	cout << "Veuillez entrer un nombre à cinq chiffres: ";
+	cout << "Veuillez entrer un nombre à cinq chiffres: "; // Demander à l'utilisateur de rentrer un nombre à cinq chiffre
 
-	cin >> cinq;
+	cin >> cinq; // Stocker le nombre dans la variable créée plus haut
 
-	cout << endl;
+	cout << endl; // Retour à la ligne
 
-	if (cinq >= 10000 && cinq <= 99999)
+	if (cinq >= 10000 && cinq <= 99999) // Rentrer dans le if si la variable cinq est plus grande que 10000 et en même temps plus petite que 99999
 	{
-		nb1 = (cinq % 100000) / 10000;
-		nb2 = (cinq % 10000) / 1000;
-		nb3 = (cinq % 1000) / 100;
+		nb1 = (cinq % 100000) / 10000; // Calcul pour récupérer juste le premier chiffre
+		nb2 = (cinq % 10000) / 1000; // Calcul pour le deuxième
+		nb3 = (cinq % 1000) / 100; // Ainsi de suite
 		nb4 = (cinq % 100) / 10;
 		nb5 = cinq % 10;
 
-		cout << nb1 << endl;
+		cout << nb1 << endl; // Afficher les résultats des calculs juste au-dessus
 		cout << nb2 << endl;
 		cout << nb3 << endl;
 		cout << nb4 << endl;
@@ -49,7 +49,7 @@ int main()
 	}
 	else
 	{
-		cout << "Erreur! Ce nombre ne contient pas cinq chiffres!";
+		cout << "Erreur! Ce nombre ne contient pas cinq chiffres!"; // Affiche un message d'erreurs car le nombre ne contient pas 5 chiffres
 
 		cout << endl;
 	}
